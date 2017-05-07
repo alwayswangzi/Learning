@@ -155,7 +155,7 @@ typedef在语法上是一个存储类的关键字（如auto、extern、mutable�
 
 通常讲，typedef要比#define要好，特别是在有指针的场合。请看例子：
 ```cpp
-typedef char *pStr1;
+typedef char * pStr1;
 #define pStr2 char *;
 pStr1 s1, s2;
 pStr2 s3, s4;
@@ -190,11 +190,11 @@ typedef 声明，简称 typedef，为现有类型创建一个新的名字。比�
 
 Q：如何创建平台无关的数据类型，隐藏笨拙且难以理解的语法?
 
-A： 使用 typedefs 为现有类型创建同义字。
+A：使用 typedefs 为现有类型创建同义字。
 
 **定义易于记忆的类型名**
 
-typedef 使用最多的地方是创建易于记忆的类型名，用它来归档程序员的意图。类型出现在所声明的变量名字中，位于 ''typedef'' 关键字右边。例如：
+typedef 使用最多的地方是创建易于记忆的类型名，用它来归档程序员的意图。类型出现在所声明的变量名字中，位于 'typedef' 关键字右边。例如：
 
 `typedef int size;`
 
@@ -202,27 +202,33 @@ typedef 使用最多的地方是创建易于记忆的类型名，用它来归档
 
 `void measure(size * psz); `
 `size array[4];`
-`size len = file.getlength();std::vector <size> vs;` 
+`size len = file.getlength();`
+`std::vector <size> vs;` 
 
 typedef 还可以掩饰符合类型，如指针和数组。例如，你不用象下面这样重复定义有 81 个字符元素的数组：
 
-`char line[81];char text[81];`
+`char line[81];` 
+`char text[81];`
 
 定义一个 typedef，每当要用到相同类型和大小的数组时，可以这样：
 
-`typedef char Line[81]; Line text, secondline;getline(text);`
+`typedef char Line[81]; `
+`Line text, secondline;`
+`getline(text);`
 
 同样，可以象下面这样隐藏指针语法：
 
-`typedef char * pstr;int mystrcmp(pstr, pstr);`
+`typedef char * pstr;`
+`int mystrcmp(pstr, pstr);`
 
-这里将带我们到达第一个 typedef 陷阱。标准函数 strcmp()有两个‘const char *’类型的参数。因此，它可能会误导人们象下面这样声明 mystrcmp()：
+这里将带我们到达第一个 typedef 陷阱。标准函数 strcmp()有两个‘const char \*’类型的参数。因此，它可能会误导人们象下面这样声明 mystrcmp()：
 
 `int mystrcmp(const pstr, const pstr);` 
 
-这是错误的，按照顺序，‘const pstr’被解释为‘char * const’（一个指向 char 的常量指针），而不是‘const char *’（指向常量 char 的指针）。这个问题很容易解决：
+这是错误的，按照顺序，‘const pstr’被解释为‘char * const’（一个指向 char 的常量指针），而不是‘const char \*’（指向常量 char 的指针）。这个问题很容易解决：
 
-`typedef const char * cpstr; int mystrcmp(cpstr, cpstr);` // 现在是正确的
+`typedef const char * cpstr;` 
+`int mystrcmp(cpstr, cpstr);` // 现在是正确的
 
 **记住：**不管什么时候，只要为指针声明 typedef，那么都要在最终的 typedef 名称中加一个 const，以使得该指针本身是常量，而不是对象。
 
@@ -264,7 +270,7 @@ typedef 有另外一个重要的用途，那就是定义机器无关的类型，
 
 `typedef float REAL; `
 
-你不用对源代码做任何修改，便可以在每一种平台上编译这个使用 REAL 类型的应用程序。唯一要改的是 typedef 本身。在大多数情况下，甚至这个微小的变动完全都可以通过奇妙的条件编译来自动实现。不是吗? 标准库广泛地使用 typedef 来创建这样的平台无关类型：size_t，ptrdiff 和 fpos_t 就是其中的例子。此外，象 std::string 和 std::ofstream 这样的 typedef 还隐藏了长长的，难以理解的模板特化语法，例如：basic_string<char, char_traits<char>，allocator<char>> 和 basic_ofstream<char, char_traits<char>>。
+你不用对源代码做任何修改，便可以在每一种平台上编译这个使用 REAL 类型的应用程序。唯一要改的是 typedef 本身。在大多数情况下，甚至这个微小的变动完全都可以通过奇妙的条件编译来自动实现。不是吗? 标准库广泛地使用 typedef 来创建这样的平台无关类型：size_t，ptrdiff 和 fpos_t 就是其中的例子。此外，象 std::string 和 std::ofstream 这样的 typedef 还隐藏了长长的，难以理解的模板特化语法，例如：basic_string<char, char_traits<char>，allocator<char> > 和 basic_ofstream<char, char_traits<char> >。
 
 
 
