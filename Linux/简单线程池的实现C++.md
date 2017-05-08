@@ -297,3 +297,11 @@ Thread pool clear, exit.
 流程图如下：
 
 ![线程池](./线程池.jpg)
+
+扩展资料：
+
+[线程池设计中的惊群问题](http://zsxxsz.iteye.com/blog/2028452)
+
+[C 实现有追求的线程池 探究](http://www.cnblogs.com/life2refuel/p/5322567.html)
+
+[高效线程池(threadpool)的实现](http://www.cnblogs.com/Leo_wl/p/6059405.html)
