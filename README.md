@@ -14,7 +14,7 @@
 
 # Linux
 
-1. [简单理解互斥锁的概念与实现](./Linux/互斥锁的实现.md)
+1. [浅析互斥锁的概念与实现](./Linux/互斥锁的实现.md)
 2. [简单的线程池的设计与实现（C++）](./Linux/简单线程池实现C++.md)
 
 # Data Structure & Algorithm
