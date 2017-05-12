@@ -14,9 +14,9 @@
 
 # Effecitve C++
 
-1. [第1章：让自己习惯于C++](./EffeciveC++/EffectiveC++之一：习惯C++.md)
-2. [第2章：构造、析构与赋值运算](./EffeciveC++/EffectiveC++之二：构造析构赋值运算.md)
-3. [第3章：资源管理](./EffeciveC++/EffectiveC++之三：资源管理.md)
+1. [第1章：让自己习惯于C++](./EffectiveC++/EffectiveC++之一：习惯C++.md)
+2. [第2章：构造、析构与赋值运算](./EffectiveC++/EffectiveC++之二：构造析构赋值运算.md)
+3. [第3章：资源管理](./EffectiveC++/EffectiveC++之三：资源管理.md)
 
 # Linux
 
