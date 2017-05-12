@@ -12,6 +12,12 @@
 7. [C++中指向函数的指针](./C++/C++指向函数的指针.md)
 8. [C++中指向函数的指针（二）](./C++/C++指向函数的指针（二）.md)
 
+# Effecitve C++
+
+1. [第1章：让自己习惯于C++](./EffeciveC++/EffectiveC++之一：习惯C++.md)
+2. [第2章：构造、析构与赋值运算](./EffeciveC++/EffectiveC++之二：构造析构赋值运算.md)
+3. [第3章：资源管理](./EffeciveC++/EffectiveC++之三：资源管理.md)
+
 # Linux
 
 1. [浅析互斥锁的概念与实现](./Linux/互斥锁的实现.md)
