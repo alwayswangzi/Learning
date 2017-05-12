@@ -26,6 +26,7 @@
 # Data Structure & Algorithm
 
 1. [冒泡排序算法的实现与改进](./Algorithm/冒泡排序算法的实现与改进.md)
+2. [线性表](./Algorithm/线性表.md)
 
 # Network
 
