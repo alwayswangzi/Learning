@@ -29,6 +29,7 @@
 2. [线性表](./Algorithm/线性表.md)
 3. [直接插入排序和希尔排序](./Algorithm/直接插入排序与希尔排序.md)
 4. [归并排序](./Algorithm/归并排序.md)
+5. [二叉堆](./Algorithm/二叉堆.md)
 
 # Network
 
