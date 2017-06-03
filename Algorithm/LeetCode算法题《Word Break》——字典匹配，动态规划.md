@@ -41,19 +41,19 @@ OK数组：
 
 | 0    | 1    | 2    | 3    | 4    | 5    | 6    | 7    | 8    |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| true |      |      |      |      |      |      |      |      |
+| true |      |      |      | true |      |      |      | true |
 
 匹配过程：
 
 | 过程   | 拆分                                       | 结果         |
 | ---- | ---------------------------------------- | ---------- |
-| 1    | "l"                                      | 均不匹配       |
-| 2    | "1"&&"e", "le"                           | 均不匹配       |
-| 3    | "1e"&&"e", "l"&&"ee", "lee"              | 均不匹配       |
+| 1    | "l"                                      | \       |
+| 2    | "1"&&"e", "le"                           | \       |
+| 3    | "1e"&&"e", "l"&&"ee", "lee"              | \       |
 | 4    | "lee"&&"t", "le"&&"et", "l"&&"eet", <u>"leet"</u>, break | OK[4]=TRUE |
-| 5    | "leet"&&"c", "lee"&&"ct", "le"&&"ect", "l"&&"eetc", "leetc" | 均不匹配       |
-| 6    | "leetc"&&"o", "leet"&&"co", "lee"&&"tco", "le"&&"etco", "l"&&"eetco", "leetco" | 均不匹配       |
-| 7    | "leetco"&&"d", "leetc"&&"od", "leet"&&"cod", "lee"&&"tcod", "le"&&"etcod", "l"&&"eetcod" | 均不匹配       |
+| 5    | "leet"&&"c", "lee"&&"ct", "le"&&"ect", "l"&&"eetc", "leetc" | \       |
+| 6    | "leetc"&&"o", "leet"&&"co", "lee"&&"tco", "le"&&"etco", "l"&&"eetco", "leetco" | \       |
+| 7    | "leetco"&&"d", "leetc"&&"od", "leet"&&"cod", "lee"&&"tcod", "le"&&"etcod", "l"&&"eetcod" | \       |
 | 8    | "leetcod"&&"e", "leetco"&&"de", "leetc"&&"ode", <u>"leet"&&"code"</u>, break | OK[8]=TRUE |
 
 **代码**
