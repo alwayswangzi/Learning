@@ -1,6 +1,20 @@
 # Learning
 记录自己学习过程中的总结和感悟
 
+# Algorithm & Data Structure
+
+1. [冒泡排序](./Algorithm/冒泡排序.md)
+2. [线性表](./Algorithm/线性表.md)
+3. [直接插入排序和希尔排序](./Algorithm/直接插入排序与希尔排序.md)
+4. [归并排序](./Algorithm/归并排序.md)
+5. [二叉堆](./Algorithm/二叉堆.md)
+6. [二叉查找树](./Algorithm/二叉查找树.md)
+7. [堆排序](./Algorithm/堆排序.md)
+
+## leetcode
+
+1. [word break（字典匹配）——动态规划](./Algorithm/LeetCode算法题《Word Break》——字典匹配，动态规划.md)
+
 # C/C++
 
 1. [C/C++位域的概念与用法](./C++/C位域.md)
@@ -12,7 +26,7 @@
 7. [C++中指向函数的指针](./C++/C++指向函数的指针.md)
 8. [C++中指向函数的指针（二）](./C++/C++指向函数的指针（二）.md)
 
-# Effecitve C++
+## Effecitve C++
 
 1. [第1章：让自己习惯于C++](./EffectiveC++/EffectiveC++之一：习惯C++.md)
 2. [第2章：构造、析构与赋值运算](./EffectiveC++/EffectiveC++之二：构造析构赋值运算.md)
@@ -23,16 +37,10 @@
 1. [浅析互斥锁的概念与实现](./Linux/互斥锁的实现.md)
 2. [简单的线程池的设计与实现（C++）](./Linux/简单线程池的实现C++.md)
 
-# Data Structure & Algorithm
-
-1. [冒泡排序](./Algorithm/冒泡排序.md)
-2. [线性表](./Algorithm/线性表.md)
-3. [直接插入排序和希尔排序](./Algorithm/直接插入排序与希尔排序.md)
-4. [归并排序](./Algorithm/归并排序.md)
-5. [二叉堆](./Algorithm/二叉堆.md)
-
 # Network
 
 1. [计算机网络基础常考面试题](./Network/计算机网络基础常考面试题.md)
 
 # Others
+
+1. [gdb 帮助教程](./Others/C++ gdb详解教程.md)
