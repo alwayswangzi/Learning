@@ -17,7 +17,7 @@
 
 # leetcode
 
-1. [word break（字典匹配）——动态规划](./Algorithm/LeetCode算法题《Word Break》——字典匹配动态规划.md)
+1. [word break（字典匹配）——动态规划](./Algorithm/[LeetCode]word_break.md)
 
 # C/C++
 
