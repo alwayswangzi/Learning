@@ -51,18 +51,13 @@ int main()
 
 使用gdb调试
 
->$ gdb test	<------启动gdb
->GNU gdb (Ubuntu 7.11.1-0ubuntu1~16.04) 7.11.1
->Copyright (C) 2016 Free Software Foundation, Inc.
-
->License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-
->This is free software: you are free to change and redistribute it.
-
->There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
-
->and "show warranty" for details.
-
+>$ gdb test	<------启动gdb  
+>GNU gdb (Ubuntu 7.11.1-0ubuntu1~16.04) 7.11.1  
+>Copyright (C) 2016 Free Software Foundation, Inc.  
+>License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>  
+>This is free software: you are free to change and redistribute it.  
+>There is NO WARRANTY, to the extent permitted by law.  Type "show copying"  
+>and "show warranty" for details.  
 >This GDB was configured as "x86_64-linux-gnu".
 
 >Type "show configuration" for configuration details.
