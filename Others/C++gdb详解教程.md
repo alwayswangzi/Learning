@@ -58,150 +58,78 @@ int main()
 >This is free software: you are free to change and redistribute it.  
 >There is NO WARRANTY, to the extent permitted by law.  Type "show copying"  
 >and "show warranty" for details.  
->This GDB was configured as "x86_64-linux-gnu".
-
->Type "show configuration" for configuration details.
-
->For bug reporting instructions, please see:
-
-><http://www.gnu.org/software/gdb/bugs/>.
-
->Find the GDB manual and other documentation resources online at:
-
-><http://www.gnu.org/software/gdb/documentation/>.
-
->For help, type "help".
-
->Type "apropos word" to search for commands related to "word"...
-
->Reading symbols from test...done.
-
->(gdb) l		<------列出源代码 
-
->2	
-
->3	int func(int n)
-
->4	{
-
->5	    int sum=0,i;
-
->6	    for(i=0; i<n; i++)
-
->7	    {
-
->8	    	sum+=i;
-
->9	    }
-
->10	    return sum;
-
->11	}
-
->(gdb)		<------直接回车表示重复执行上一次的命令 
-
->12	
-
->13	int main()
-
->14	{
-
->15	    int i;
-
->16	    long result = 0;
-
->17	    for(i=1; i<=100; i++)
-
->18	    {
-
->19	    	result += i;
-
->20	    }
-
->21	
-
->(gdb) break 16		<------设置断点，在源代码第16行处
-
->Breakpoint 1 at 0x40055c: file test.c, line 16.
-
->(gdb) break func	<------设置断点，在函数func入口处
-
->Breakpoint 2 at 0x40052d: file test.c, line 5.
-
->(gdb) info break	<------查看断点信息
-
->Num     Type           Disp Enb Address            What
-
->1       breakpoint     keep y   0x000000000040055c in main at test.c:16
-
->2       breakpoint     keep y   0x000000000040052d in func at test.c:5
-
->(gdb) r		<------运行程序（run）
-
->Starting program: /home/wzh/test/test 
-
->Breakpoint 1, main () at test.c:16
-
->16	    long result = 0;
-
->(gdb) n		<------单步执行（next）
-
->17	    for(i=1; i<=100; i++)
-
->(gdb) n
-
->19	    	result += i;
-
->(gdb) n
-
->17	    for(i=1; i<=100; i++)
-
->(gdb) n
-
->19	    	result += i;
-
->(gdb) c		<------继续执行（continue）
-
->Continuing.
-
->Breakpoint 2, func (n=250) at test.c:5
-
->5	    int sum=0,i;
-
->(gdb) n
-
->6	    for(i=0; i<n; i++)
-
->(gdb) p i	<------打印（print）变量i的值
-
->$1 = 32767
-
->(gdb) p sum
-
->$2 = 0
-
->(gdb) bt	<------查看函数堆栈
-
->\#0  func (n=250) at test.c:6
-
->\#1  0x00000000004005a0 in main () at test.c:23
-
->(gdb) finish	<------退出函数
-
->Run till exit from #0  func (n=250) at test.c:6
-
->0x00000000004005a0 in main () at test.c:23
-
->23	    printf("result[1-250] = %d /n", func(250) );
-
->Value returned is $6 = 31125
-
->(gdb) c
-
->Continuing.
-
->result[1-100] = 5050 /nresult[1-250] = 31125 /n[Inferior 1 (process 110450) exited normally]	<------程序退出，调试结束
-
+>This GDB was configured as "x86_64-linux-gnu".   
+>Type "show configuration" for configuration details.    
+>For bug reporting instructions, please see:    
+><http://www.gnu.org/software/gdb/bugs/>.    
+>Find the GDB manual and other documentation resources online at:    
+><http://www.gnu.org/software/gdb/documentation/>.    
+>For help, type "help".    
+>Type "apropos word" to search for commands related to "word"...    
+>Reading symbols from test...done.    
+>(gdb) l		<------列出源代码     
+>2  	
+>3	int func(int n)  
+>4	{  
+>5	    int sum=0, i;  
+>6	    for(i=0; i<n; i++)  
+>7	    {  
+>8	    	sum+=i;  
+>9	    }  
+>10	    return sum;  
+>11	}  
+>(gdb)		<------直接回车表示重复执行上一次的命令   
+>12  	
+>13	int main()  
+>14	{  
+>15	    int i;  
+>16	    long result = 0;  
+>17	    for(i=1; i<=100; i++)  
+>18	    {  
+>19	    	result += i;  
+>20	    }  
+>21  
+>(gdb) break 16		<------设置断点，在源代码第16行处  
+>Breakpoint 1 at 0x40055c: file test.c, line 16.  
+>(gdb) break func	<------设置断点，在函数func入口处  
+>Breakpoint 2 at 0x40052d: file test.c, line 5.  
+>(gdb) info break	<------查看断点信息  
+>Num     Type           Disp Enb Address            What  
+>1       breakpoint     keep y   0x000000000040055c in main at test.c:16  
+>2       breakpoint     keep y   0x000000000040052d in func at test.c:5  
+>(gdb) r		<------运行程序（run）  
+>Starting program: /home/wzh/test/test   
+>Breakpoint 1, main () at test.c:16  
+>16	    long result = 0;  
+>(gdb) n		<------单步执行（next）  
+>17	    for(i=1; i<=100; i++)  
+>(gdb) n  
+>19	    	result += i;  
+>(gdb) n  
+>17	    for(i=1; i<=100; i++)  
+>(gdb) n  
+>19	    	result += i;  
+>(gdb) c		<------继续执行（continue）  
+>Continuing.  
+>Breakpoint 2, func (n=250) at test.c:5  
+>5	    int sum=0,i;  
+>(gdb) n  
+>6	    for(i=0; i<n; i++)  
+>(gdb) p i	<------打印（print）变量i的值  
+>$1 = 32767  
+>(gdb) p sum  
+>$2 = 0  
+>(gdb) bt	<------查看函数堆栈  
+>\#0  func (n=250) at test.c:6  
+>\#1  0x00000000004005a0 in main () at test.c:23  
+>(gdb) finish	<------退出函数  
+>Run till exit from #0  func (n=250) at test.c:6  
+>0x00000000004005a0 in main () at test.c:23  
+>23	    printf("result[1-250] = %d /n", func(250) );  
+>Value returned is $6 = 31125  
+>(gdb) c  
+>Continuing.  
+>result[1-100] = 5050 /nresult[1-250] = 31125 /n[Inferior 1 (process 110450) exited normally]	<------程序退出，调试结束  
 >(gdb) q		<------退出gdb
 
 ## 2. 使用gdb
