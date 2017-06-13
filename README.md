@@ -11,9 +11,13 @@
 6. [二叉查找树](./Algorithm/二叉查找树.md)
 7. [堆排序](./Algorithm/堆排序.md)
 
-## leetcode
+# Database
 
-1. [word break（字典匹配）——动态规划](./Algorithm/LeetCode算法题《Word Break》——字典匹配，动态规划.md)
+1.[Redis](./Database/Redis.md)
+
+# leetcode
+
+1. [word break（字典匹配）——动态规划](./Algorithm/LeetCode算法题《Word Break》——字典匹配动态规划.md)
 
 # C/C++
 
@@ -26,7 +30,7 @@
 7. [C++中指向函数的指针](./C++/C++指向函数的指针.md)
 8. [C++中指向函数的指针（二）](./C++/C++指向函数的指针（二）.md)
 
-## Effecitve C++
+# Effecitve C++
 
 1. [第1章：让自己习惯于C++](./EffectiveC++/EffectiveC++之一：习惯C++.md)
 2. [第2章：构造、析构与赋值运算](./EffectiveC++/EffectiveC++之二：构造析构赋值运算.md)
@@ -43,4 +47,4 @@
 
 # Others
 
-1. [gdb 帮助教程](./Others/C++ gdb详解教程.md)
+1. [gdb 帮助教程](./Others/C++gdb详解教程.md)
